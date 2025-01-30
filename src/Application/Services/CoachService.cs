@@ -48,6 +48,7 @@ public class CoachService : ICoachService
             {
                 clubOrigin.HandleRelease(coach);
                 await _clubRepository.UpdateAsync(clubOrigin);
+                coach.LeaveClub();
             }
         }
 
